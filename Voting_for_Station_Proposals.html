@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" >         
+<title>MTA</title>
+</head>
+
+<body>   
+<center>
+<h1>Subway Station</h1>
+<h2>Is This a Ideal Place for a Station?</h2>
+<form>
+
+<div>
+<input type="button" value="Click to vote yes" id="countButton" />
+Yes Counter: <span id="displayCount">0</span>
+<input type="button" value="Click to vote no" id="count2Button" />
+No Counter: <span id="displayCount2">0</span>   
+</div>
+
+<script>
+var count = 0;
+var count2 = 0;
+var countButton = document.getElementById("countButton");
+var displayCount = document.getElementById("displayCount");
+var count2Button = document.getElementById("count2Button");
+var displayCount2 = document.getElementById("displayCount2");
+countButton.onclick = function(){
+  count++;
+  displayCount.innerHTML = count;
+  countButton.disabled = true;
+  count2Button.disabled = true;
+}
+count2Button.onclick = function(){
+  count2++;
+  displayCount2.innerHTML = count2;
+  count2Button.disabled = true;
+  countButton.disabled = true;
+}
+</script>
+
+</form>
+
+</center>
+
+</body> 
+</html>
